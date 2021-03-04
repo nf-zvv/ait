@@ -395,6 +395,137 @@ a::before {
 
 `::cue`, `::first-letter`, `::first-line`, `::selection`, `::slotted`, `::backdrop`, `::placeholder`, `::marker`, `::spelling-error`, `::grammar-error `.
 
+## Единицы измерения
+
+Есть два типа единиц измерения:
+
+1. Относительные (определяют размер элемента относительно значения другого размера)
+2. Абсолютные (не зависят от устройства вывода)
+
+### Относительные единицы
+
+Относительные единицы обычно используют для работы с текстом, либо когда надо вычислить процентное соотношение между элементами. Изменяемое значение зависит от размера шрифта текущего элемента (он устанавливается через стилевое свойство `font-size`).
+
+| Единица | Описание                        |
+| ------- | ------------------------------- |
+| `em`    | Высота шрифта текущего элемента |
+| `ex`    | Высота символа `x`              |
+| `px`    | Пиксел                          |
+| `%`     | Процент                         |
+
+`1em` равен размеру шрифта, заданного в браузере по умолчанию.
+
+`ex` определяется как высота символа `x` в нижнем регистре.
+
+Размер пиксела `px` зависит от разрешения устройства и его технических характеристик.
+
+### Абсолютные единицы
+
+Применяются реже, чем относительные и, как правило, при работе с текстом.
+
+| Единица | Описание                         |
+| ------- | -------------------------------- |
+| `in`    | Дюйм (1 дюйм равен 2,54 см)      |
+| `cm`    | Сантиметр                        |
+| `mm`    | Миллиметр                        |
+| `pt`    | Пункт (1 пункт равен 1/72 дюйма) |
+| `pc`    | Пика (1 пика равна 12 пунктам)   |
+
+Самой распространенной единицей является пункт `pt`, который используется для указания размера шрифта.
+
+## Пиши CSS кратко
+
+### Шрифт
+
+```css
+font: 1em/1.5em bold italic serif;
+```
+
+Вместо:
+
+```css
+font-size: 1em;
+font-height: 1.5em;
+font-weight: bold;
+font-style: italic;
+font-family: serif;
+```
+
+### Фон страницы
+
+```css
+background: #fff url(image.gif) no-repeat top left;
+```
+
+Вместо:
+
+```css
+background-color: #fff;
+background-image: url(image.gif);
+background-repeat: no-repeat;
+background-position:top left;
+```
+
+### Списки
+
+```css
+list-style: disc outside url(image.gif);
+```
+
+Вместо:
+
+```css
+list-style: #fff;
+list-style-type: disc;
+list-style-position: outside;
+list-style-image: url(image.gif);
+```
+
+### Рамка
+
+```css
+border: 1px black solid;
+```
+
+Вместо:
+
+```css
+border-width: 1px;
+border-color: black;
+border-style: solid;
+```
+
+### Margin & padding
+
+#### 4 разных значения
+
+```css
+margin: 2px 1px 3px 4px (top, right, bottom, left);
+```
+
+Вместо:
+
+```css
+margin-top: 2px;
+margin-right: 1px;
+margin-bottom: 3px;
+margin-left: 4px;
+```
+
+#### 3 разных значения
+
+```css
+margin: 5px 1px 3px (top, right and left, bottom);
+```
+
+Вместо:
+
+```css
+margin-top: 5px;
+margin-right: 1px;
+margin-bottom: 3px;
+margin-left: 1px;
+```
 
 ## Ссылки
 
